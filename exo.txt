@@ -23,4 +23,4 @@ Creez une base que vous allez appeller comme vous voulez
 vous allez 
 Utilisateur : ID (toutes les tables) NOM PRENOM AGE EMAIL MOT DE PASSE ....
 SIMPLEORM
-https://github.com/roaatech/php-simple-orm#:~:text=Simple%20ORM%20is%20an%20object,extra%20database%20interaction%20than%20necessary.
+https://github.com/noetix/Simple-ORM
