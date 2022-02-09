@@ -24,3 +24,23 @@ vous allez
 Utilisateur : ID (toutes les tables) NOM PRENOM AGE EMAIL MOT DE PASSE ....
 SIMPLEORM
 https://github.com/noetix/Simple-ORM
+
+
+
+CREEZ UN FICHIER EN PHP
+CONNECTE A LA BD
+Puis vous allez afficher vos Utilisateur
+afficher L ID 1 l ID 2 ...
+Afficher Tout les utilisateurs
+Modifier un Utilisateur
+Inserer un utilisateurs
+Supprimer un utilisateurs
+
+
+Créez une table article
+Puis vous allez afficher vos article
+afficher L ID 1 l ID 2 ...
+Afficher Tout les article
+Modifier un article
+Inserer un article
+Supprimer un article
