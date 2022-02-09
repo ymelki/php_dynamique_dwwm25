@@ -37,11 +37,29 @@ Inserer un utilisateurs
 Supprimer un utilisateurs
 
 
-Créez une table article
+Créez une table article (id, nom , prix, ...)
 Puis vous allez afficher vos article
 afficher L ID 1 l ID 2 ...
 Afficher Tout les article
 Modifier un article
 Inserer un article
 Supprimer un article
-https://stackoverflow.com/questions/2995054/access-denied-for-user-rootlocalhost-using-passwordno
+
+
+
+Correction d aujourd'hui
+Create : insérer des données
+Read : Lire les données
+Update : Modifier
+Delete : Supprimer
+
+MENU  : Connexion | Tout les utilisateurs ...
+READ : Connexion utilisateurs: FORMULAIRE : Nom Mot de passe $_POST / $_SESSION VARIABLE PERSISTANTE UTILISATEUR TANT QUE JE ME DECONNECTE PAS AVEC DES DONNES CONFIDENTIELLES / $_COOKIES PANIER PERSISTANTE DONNES TEMPORAIRE CONFIDENTIELLES
+READ++ : L'ensemble des utilisateurs affichés => USER(ID) =>GET On affiche l utilisateur correspondant
+CREATE : Inscription utilisateur : FORMULAIRE : Nom Mot de passe ... POST 
+Delete : READ++ : Supprimer un utilisateur
+Update : READ++ : Cliquer sur modifier un utilisateur
+
+IDEM pour les articles
+
+MVC
