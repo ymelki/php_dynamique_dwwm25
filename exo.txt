@@ -44,3 +44,4 @@ Afficher Tout les article
 Modifier un article
 Inserer un article
 Supprimer un article
+https://stackoverflow.com/questions/2995054/access-denied-for-user-rootlocalhost-using-passwordno

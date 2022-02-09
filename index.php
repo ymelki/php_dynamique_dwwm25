@@ -35,9 +35,42 @@ SimpleOrm::useConnection($conn, 'coursphp');
 // je recupere la classe lié à simpleorm
 // me permettant de travailler sur la table correspondante
 require "Utilisateur.php";
-
+/*
 $entry = Utilisateur::all();
 var_dump($entry);
 
 
+Puis vous allez afficher vos Utilisateur
+afficher L ID 1 l ID 2 ...
+Afficher Tout les utilisateurs
+Modifier un Utilisateur
+Inserer un utilisateurs
+Supprimer un utilisateurs
+
+*/ 
+
+// Inserer un utilisateurs
+$entry = new Utilisateur;
+$entry->prenom = 'Melki';
+$entry->nom = 'Melki';
+$entry->mdp = 'Melki';
+$entry->mail = 'Melki';
+$entry->save();
+
+
 // RECUPERER LES DONNES DE LA TABLE UTILISATEUR
+
+// supprimer Lutilisateur 1
+$entry = Utilisateur::retrieveByPK(1);
+$entry->delete();
+
+// afficher le nom d'un utilisateur
+$entry = Utilisateur::retrieveByPK(1);
+echo $entry->nom;
+
+// modifier
+$entry = Utilisateur::retrieveByPK(1);
+$entry->nom = 'Mars!';
+$entry->save();
+
+// afficher tout le contenu ALL
