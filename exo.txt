@@ -2,3 +2,25 @@ NOUVEAU PROJET PHP :
 Afficher dans votre page votre nom prenom age mail date de naissance 
 ...
 issue de l'url
+
+FAIRE UN FORMULAIRE AVEC 
+NOM  , PRENOM , AGE , ... PWD 
+AFFICHER DANS LA PAGE ENVOYE EN POST
+
+ - protégé 
+ - capacité
+ - optimisé
+ - centralisé
+ - structuré
+
+Base de donnée : Dossier ou nom logique qui va contenir des tables qui elles vont contenir les données
+Tout en minuscule
+BASE : COURSPHP
+Utilisateur : ID (toutes les tables) NOM PRENOM AGE EMAIL MOT DE PASSE ....
+
+Exercice PHPMYADMIN
+Creez une base que vous allez appeller comme vous voulez
+vous allez 
+Utilisateur : ID (toutes les tables) NOM PRENOM AGE EMAIL MOT DE PASSE ....
+SIMPLEORM
+https://github.com/roaatech/php-simple-orm#:~:text=Simple%20ORM%20is%20an%20object,extra%20database%20interaction%20than%20necessary.
