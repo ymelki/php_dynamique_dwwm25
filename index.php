@@ -1,53 +1,43 @@
 <?php
-//1 TABLEAU PHP ? ASSOCIATIF , INDICE
-// INDICE
-$utilisateur[0]="Yoel";
-$utilisateur[1]="Melki";
-//ASSOCIATIF
-$utilisateur['prenom']="Yoel";
-$utilisateur['nom']="Melki";
-
-$article=array();
-// AFFICHER UN TABLEAU TECHNIQUE / classique
-//var_dump($article);
-
-// http://localhost/index.php?votrvar=efdsfdsf32432&tr=GFD
-
- 
-var_dump($_GET); 
-echo $_GET['prenom'];
-
-// URL :
-// http://votresite.com/index.php?nom=melki&prenom=yoel&age=35
-/*
-print_r($utilisateur);
-var_dump($utilisateur);
-
-foreach($utilisateur as $key => $value){
-    echo $key. "      ".$value;
-}*/
-
-/*
-1 TABLEAU PHP ? ASSOCIATIF , INDICE
+// SIMPLE ORM
+// 1 connecter à la BD 
+// préciser le serveur de la connexion à la BD
+// USER
+// MDP
 
 
-2 VARIABLE LOCALE  : limité à une fonction
-3 VARIABLE GLOBAL  : limité à la page
-4 VARIABLE SUPER GLOBAL : plus qu'une page 
-$_GET (URL)
-$_POST 
-*/ 
+// Connect to the database using mysqli
+// on créé une variable $conn
+// qui contient un objet mysqli
+// $tab['nom'] $tab->nom
+$conn = new mysqli('127.0.0.1', 'root', '');
+// var_dump($conn);
+if ($conn->connect_error)
+  die(sprintf('Unable to connect to the database. %s', $conn->connect_error));
 
-?>
-<br />
-<a href="votrepage.php?id=23">Article 23</a>
+// on est connecté
 
-<form method="POST" action="reception_form.php">
-    VOICI LA VALEUR QUE JE POSTE PAR PHP
-    <br />
-    <input type="text" value="" name="nom"  />
-    <br />
-    <input type="password" value="" name="pwd"  />
-    <br />
-    <input type="submit" value="Envoyer" />
-</form>
+// on recuperer l'ORM SimpleOrm.class.php
+// Il va pour voir généré à notre place le code SQL qu 'on aurait du écrire
+
+// on inclut notre fichier simple ORM
+// Include the Simple ORM class 
+require "SimpleOrm.class.php";
+
+// Tell Simple ORM to use the connection you just created.
+// SIMPLE ORM est une classe 
+// 2 CONNECTE TOI A LA BASE COURSPHP
+SimpleOrm::useConnection($conn, 'coursphp');
+
+// je suis enfin connecté à la B.D coursphp :)))
+// ORM il va générer le SQL que j'ai besoin
+// il va fonctionner en reprennant la table que j'ai sous forme de classe
+// je recupere la classe lié à simpleorm
+// me permettant de travailler sur la table correspondante
+require "Utilisateur.php";
+
+$entry = Utilisateur::all();
+var_dump($entry);
+
+
+// RECUPERER LES DONNES DE LA TABLE UTILISATEUR
