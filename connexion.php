@@ -29,8 +29,17 @@ require_once "Utilisateur.php";
 $nom=$_POST['nom'];
 $pwd=$_POST['password'];
 
-$entry = Utilisateur::retrieveByPrenom($_POST['nom'], SimpleOrm::FETCH_ONE);
+$entry = Utilisateur::retrieveByNom($_POST['nom'], SimpleOrm::FETCH_ONE);
+
+
+
 var_dump($entry);
+// dans le cas ou on ne trouve pas d'utilisateur avec le nom envoyé en POST alors erreur
+
+if ($entry==null){
+    die ("Stop : le nom entré n'est pas en base ... ! ");
+}
+
 
 // 3. comparer les données SI POST['nom']==entry->prenom && .. alors OK
 
@@ -38,7 +47,7 @@ var_dump($entry);
 $nom_bd=$entry->nom;
 $pwd_bd=$entry->mdp;
 
-if ($nom==$nom_bd && $pwd==$pwd_bd){
+if (($nom==$nom_bd) && ($pwd==$pwd_bd)){
     echo "Vous êtes connecté avec le nom ".$nom_bd;
 }
 else {
