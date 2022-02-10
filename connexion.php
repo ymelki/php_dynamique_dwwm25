@@ -13,14 +13,7 @@ var_dump($_POST);
 //ou non tu reviens à la page précédente
 
 // 1. Connecte BD 
-$conn = new mysqli('127.0.0.1', 'root', '');
-// var_dump($conn);
-if ($conn->connect_error)
-  die(sprintf('Unable to connect to the database. %s', $conn->connect_error));
-
-// 2. Recuperer l utilisateur souhaité
-require "SimpleOrm.class.php";
-SimpleOrm::useConnection($conn, 'coursphp');
+bd();
 
 require_once "Utilisateur.php";
 
@@ -48,7 +41,7 @@ if ($entry==null){
 $nom_bd=$entry->nom;
 $pwd_bd=$entry->mdp;
 
-if (($nom==$nom_bd) && ($pwd==$pwd_bd)){
+if (($nom==$nom_bd) && (password_verify($pwd, $pwd_bd ))   ){
     echo "Vous êtes connecté avec le nom ".$nom_bd;
     $_SESSION['user']=$nom;
 }

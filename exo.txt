@@ -63,3 +63,15 @@ Update : READ++ : Cliquer sur modifier un utilisateur
 IDEM pour les articles
 
 MVC
+=> Routeur
+Pourquoi ? trop de page
+solution pour eviter d avoir un lien = une page
+GET['page'] => si on est egale à connexion = > connexion()
+GET['page'] => si on est egale à Inscription = > Inscription()
+..
+=> Controlleur
+
+=> Modele
+
+=> Vue
+
