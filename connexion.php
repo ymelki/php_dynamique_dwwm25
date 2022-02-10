@@ -1,3 +1,4 @@
+<?php include "header.php"; ?>
 <?php
 
 // afficher les données envoyés par l utilisateur
@@ -49,8 +50,10 @@ $pwd_bd=$entry->mdp;
 
 if (($nom==$nom_bd) && ($pwd==$pwd_bd)){
     echo "Vous êtes connecté avec le nom ".$nom_bd;
+    $_SESSION['user']=$nom;
 }
 else {
     echo "Vous n'êtes pas connecté. Veuillez vous reconnectez !";
 }
-
+?>
+<?php include "footer.php"; ?>
