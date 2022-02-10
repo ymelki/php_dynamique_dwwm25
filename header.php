@@ -17,7 +17,11 @@
     <?php
      if (isset($_SESSION['user'])==true) {
          echo "Vous êtes connecté en tant que ". $_SESSION['user'];
-     }else {
+         ?>
+         - <a href="liste_utilisateur.php">Liste des utilisateurs</a>
+         <?php
+     }
+     else {
         echo "Vous n'êtes pas connecté";
      } 
     
