@@ -29,7 +29,7 @@ if ( (isset($_POST['prenom'])==true) &&
         $entry->save();
         
         // on va créé une session pour le nouvel inscrit déjà connecté.
-        $_SESSION['user']= $_POST['nom'];
+        $_SESSION['user']= $_POST['nom'];   
 
 
 
@@ -45,7 +45,7 @@ if ( isset($_SESSION['user'])==false){
     <input type="text" placeholder="Veuillez entrez votre nom (pseudo)" name="nom" /> <br />
     <input type="password" placeholder="Veuillez entrez votre mot de passe" name="password" /> <br />
     <input type="submit" value="Connexion !" />
-    </form>  
+</form>  
  <?php
 }
 else {

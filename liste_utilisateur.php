@@ -14,7 +14,7 @@ foreach($entry as $monutilisateur){
     
     
     
-  -   <a href='modifier.php?id=".$monutilisateur->id."'> Modifier</a>-
+  -   <a href='modifier.php?id=".$monutilisateur->id."'>Modifier</a>-
     
     
     <a href='supprimer.php?id=".$monutilisateur->id."'>Supprimer</a><hr>";
