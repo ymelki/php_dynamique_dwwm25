@@ -60,6 +60,9 @@ CREATE : Inscription utilisateur : FORMULAIRE : Nom Mot de passe ... POST
 Delete : READ++ : Supprimer un utilisateur
 Update : READ++ : Cliquer sur modifier un utilisateur
 
+GET => URL , SANS FORMULAIRE , PAS CONFIDENTIELLE
+POST => FORMULAIRE OU DONNE CONFIDENTIELLE
+
 IDEM pour les articles
 
 MVC

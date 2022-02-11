@@ -10,7 +10,14 @@ require_once "Utilisateur.php";
 $entry = Utilisateur::all();
 
 foreach($entry as $monutilisateur){
-    echo "<a href='unutilisateur.php?id=".$monutilisateur->id."'> $monutilisateur->prenom $monutilisateur->nom </a> Modifier - Supprimer <hr>";
+    echo "<a href='unutilisateur.php?id=".$monutilisateur->id."'> $monutilisateur->prenom $monutilisateur->nom </a>
+    
+    
+    
+  -   <a href='modifier.php?id=".$monutilisateur->id."'> Modifier</a>-
+    
+    
+    <a href='supprimer.php?id=".$monutilisateur->id."'>Supprimer</a><hr>";
     
     
     //<a href='unutilisateur.php?id=".$monutilisateur->id."'>$monutilisateur->prenom."  ".$monutilisateur->nom."</a> <hr>";
